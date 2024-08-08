@@ -1,10 +1,6 @@
 // controllers/postController.js
 import Post from '../models/Post.js';
-<<<<<<< HEAD
 import User from '../models/User.js';
-=======
-import User from '../models/user.js';
->>>>>>> f9cecacd24c62f0ef91c688de25f0990bfe3ebcc
 
 // Create a new post
 export const createPost = async (req, res) => {
