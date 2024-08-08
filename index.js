@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv/config";
 import authRouter from './routes/Auth.js';
 import userRouter from './routes/User.js';
+import postRouter from './routes/Post.js';
 
 
 const app = express();
@@ -12,6 +13,7 @@ app.use(express.json());
 
 app.use("/api/auth", authRouter);
 app.use("/api/user", userRouter);
+app.use('/api/posts', postRouter); 
 
 mongoose.connect(process.env.CONNECTION_STRING)
 .then(()=>console.log("Connected to database"))
